@@ -1,13 +1,19 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Hello World!</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-        We are using node <script>document.write(process.versions.node)</script>,
-        Chrome <script>document.write(process.versions.chrome)</script>,
-        and Electron <script>document.write(process.versions.electron)</script>.
-    </body>
+<head>
+    <base href="./">
+    <title>Test</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="app.min.css">
+    <script src="VendorScripts/shim.min.js"></script>
+    <script src="VendorScripts/zone.js"></script>
+    <script src="VendorScripts/Reflect.js"></script>
+    <script src="VendorScripts/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('./main').catch(function(err){ console.error(err); });
+    </script>
+</head>
+<body>
+    <my-app class="component prompt"></my-app>
+</body>
 </html>
