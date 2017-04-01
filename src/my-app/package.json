@@ -1,0 +1,27 @@
+{
+    "name": "my-app",
+    "version": "0.0.0",
+    "description": "test electron app",
+    "main": "main.js",
+    "scripts": {
+        "start": "./node_modules/.bin/electron .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://www.github.com/linusmarco/first-electron-app.git"
+    },
+    "keywords": [
+        "electron"
+    ],
+    "author": "Linus Marco",
+    "license": "MIT",
+
+    "dependencies": {
+        
+    },
+
+    "devDependencies": {
+        "electron": "^1.6.2"
+    }
+}
