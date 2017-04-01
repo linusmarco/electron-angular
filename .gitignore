@@ -1,5 +1,6 @@
 # Project-specific
 src/my-app/dist
+src/my-app/release-builds
 
 # Logs
 logs
