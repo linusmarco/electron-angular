@@ -1,16 +1,23 @@
 {
     "name": "my-app",
+    "productName": "TestApp",
     "version": "0.0.0",
     "description": "test electron/angular",
     "main": "main.js",
     "scripts": {
-        "build": "concurrently \"npm run tsc:w\"",
+        "compile": "concurrently \"npm run tsc:w\"",
         "lite": "lite-server",
         "tsc": "tsc",
         "tsc:w": "tsc -w",
         "gulp": "gulp",
         "start": "./node_modules/.bin/electron .",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+
+        "package-mac": "node package-application.js mac",
+        "package-win32bit": "node package-application.js win32bit",
+        "package-win64bit": "node package-application.js win64bit",
+        "package-linux": "node package-application.js linux",
+        "package-all": "npm run package-mac && npm run package-linux && npm run package-win32bit && npm run package-win64bit"
     },
     "repository": {
         "type": "git",
@@ -43,6 +50,7 @@
 
     "devDependencies": {
         "electron": "^1.6.2",
+        "electron-packager": "^8.6.0",
         "gulp": "^3.9.1",
         "gulp-clean-css": "^3.0.2",
         "gulp-concat": "^2.6.0",
