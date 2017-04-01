@@ -1,3 +1,6 @@
+# Project-specific
+src/my-app/dist
+
 # Logs
 logs
 *.log
